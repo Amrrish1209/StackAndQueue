@@ -13,6 +13,14 @@ public class Queue<T> {
 		list.addLast(data);
 	}
 
+	public T dequeue() {
+		if (list.isEmpty()) {
+			System.out.println("Queue is empty");
+			return null;
+		}
+		return list.removeFirst();
+	}
+
 	public void display() {
 		for (T data : list) {
 			System.out.print(data + " -> ");
@@ -27,5 +35,11 @@ public class Queue<T> {
 		queue.enqueue(70);
 		queue.display();
 
+		queue.dequeue();
+		queue.display();
+		queue.dequeue();
+		queue.display();
+		queue.dequeue();
+		queue.display();
 	}
 }
